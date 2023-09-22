@@ -1,24 +1,342 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>CiliosClub</title>
+    <title>Tecnicas Utilizadas</title>
+    <meta name="viewport" content=
+"width=device-width, initial-scale=1.0"
+>
+    <link href=
+"https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap"
+ rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        button {
+            background-color: white;
+            border-radius: 10px;
+            font-weight: 20px;
+            border-color: rgb(253, 85, 231);
+        }
+        body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-bar {
+    background-color: #ffa4af;
+    height: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #ffa4af;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+    background-color: #ffa4af;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+    animation: fadeIn 2s; /* Adiciona animação de fade-in */
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s; /* Adiciona animação de escala nos ícones sociais */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    background-color: #fff;
+    margin-left: 1.5cm;
+    margin-top: 40px;
+}
+
+.logo-right {
+    margin-left: 1.0cm;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.right-align li {
+    text-align: right;
+    list-style-position: inside;
+}
+
+.right-align li::before {
+    content: "\2022";
+    margin-right: 0.5em;
+}
+
+.faixa-de-cor {
+    background-color: #817d7c;
+    height: 300px;
+    position: relative;
+}
+
+.imagem-sobreposta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 30px;
+    }
+
+    main {
+        padding: 30px;
+    }
+}
+
+footer {
+    background-color: #ffa4af;
+    padding: 20px;
+    text-align: center;
+}
+.main-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 20px 0;
+}
+
+.left-content {
+flex: 1;
+}
+
+.right-content {
+flex: 1;
+text-align: right;
+}
+ul.right-align {
+    text-align: right;
+    list-style-position: inside;
+}
+
+ul.right-align li::before {
+    content: "\2022";
+    margin-right: 0.5em;
+}
+
+/* CSS para centralizar o mapa horizontalmente */
+#map-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Ajuste o tamanho do mapa conforme necessário */
+iframe {
+    width: 100%;
+    height: 200px;
+    border: 40px solid;
+}
+
+/* Estilos para o texto à direita da imagem de cílios */
+.image-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    animation: fadein 2s;
+    margin-top: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.image-text p {
+    margin: 10px 0;
+}
+
+/* Estilos para a imagem dentro da classe image-text */
+.image-text img {
+    width: 400px; /* Largura da imagem */
+    height: 200px; /* Altura da imagem */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffa4af; /* Cor rosa clara */
+    color: #fff; /* Cor do texto branco */
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adiciona uma animação de mudança de cor de fundo de 0,3 segundos */
+}
+
+/* Quando o mouse passa sobre o botão, altere a cor de fundo */
+.my-button:hover {
+    background-color: #ff66a2;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffa4af; /* Cor de rosa claro */
+    color: #fff; /* Cor do texto branco */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Animação de mudança de cor de fundo */
+}
+
+.custom-button:hover {
+    background-color: #ff66a2; /* Cor de rosa mais escura ao passar o mouse */
+}
+/* Adicione estilos CSS conforme necessário */
+.left-content {
+    float: left; /* Alinha a imagem à esquerda */
+}
+
+.image-text {
+    float: left; /* Alinha o texto à esquerda */
+    margin-left: 20px; /* Adicione margem para separar a imagem do texto */
+}
+
+/* Estilos para o texto "Referência em Extensão de cílios" */
+.reference-text {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilos para o texto "Desde 2018 no mercado" */
+.since-text {
+    font-style: italic; /* Itálico */
+}
+
+/* Estilos para o texto "+ 5000 olhares transformados ✨" */
+.transformed-text {
+    color: #ff66a2; /* Cor personalizada */
+}
+.main-text {
+    margin-top: 20px; /* Adicione margem acima do texto principal */
+    margin-left: 1.5cm; /* Margem à esquerda para alinhar com o cabeçalho */
+    margin-right: 1.5cm; /* Margem à direita para alinhar com o cabeçalho */
+}
+
+    .procedure {
+        background-color: #f9c5d1; /* Cor rosa leve */
+        padding: 10px; /* Espaçamento interno para o conteúdo */
+        border-radius: 10px; /* Borda arredondada */
+        margin-bottom: 20px; /* Espaçamento inferior entre os retângulos */
+    }
+
+    .procedure-text {
+        color: #333; /* Cor do texto dentro dos retângulos */
+    }
+
+
+    </style>
 </head>
 <body>
+    <div class="header-bar"></div>
     <header>
-        <img src="Img/logo2.jpeg" title="CiliosClub" alt="Não carregou imagem..." width="180">
-        <nav>
-            <a href="index.html">Página Inicial</a> 
-            | <a href="pagina2.html">Página 2</a> 
-            | <a href="pagina3.html">Página 3</a>
-        </nav>
+        <img src="logo2.jpeg" title="Cílios Club" alt="Não carregou imagem..." width="180" class="logo-container fade-in">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ciliosclub/"><img src="insta.png" alt="Instagram"></a>
+            <a href="https://api.whatsapp.com/message/IF27PFIXSTH2C1?autoload=1&app_absent=0"><img src="whats2.png" alt="WhatsApp"></a>
+        </div>
     </header>
-    <main>
-        <h1>Página 2</h1>
-        <p>Conteúdo da Página 2</p>
-        <a href="index.html">Voltar para a Página Inicial</a>
-        <a href="pagina3.html">Ir para a Página 3</a>
-    </main>
-    <footer>CiliosClub. Todos os direitos reservados 2023.</footer>
+    <h1 class="fade-in">Tecnicas de Alongamento de Cílios</h1>
+    <div class="main-content">
+        <div class="main-content">
+            <h2>Tecnicas Utilizadas</h2>
+        <main>
+            <div class="procedure">
+                <h3>Extensão de cílios volume brasileiro</h3>
+                <p>A princípio, o volume brasileiro é considerado um alongamento de cílios mais dramático, onde fios sintéticos são combinados com os fios naturais da cliente.</p>
+                <p><b>R$ 175,00</b></p>
+                <p>Duração: Aproximadamente 2:30 horas</p>
+                <button>Reserve</button>
+            </div>
+        
+            <div class="procedure">
+                <h3>Extensão de cílios volume híbrido</h3>
+                <p>O alongamento de cílios Volume Híbrido, mescla a técnica fio a fio clássico e Volume Russo, onde são aplicados fios individuais como no fio a fio.</p>
+                <p><b>R$ 175,00</b></p>
+                <p>Duração: Aproximadamente 2:30 horas</p>
+                <button>Reserve</button>
+            </div>
+        
+            <div class="procedure">
+                <h3>Extensão de cílios volume glamour soft</h3>
+                <p>Ele é mais volumoso do que o volume russo, dá um. olhar dramático é indicado para quem gosta de. acordar maquiada, gosta de sair a noite/p>
+                <p><b>R$ 200,00</b></p>
+                <p>Duração: Aproximadamente 2:30 horas</p>
+                <button>Reserve</button>
+            </div>
+        
+        </div>
+        
+    </div>
+</main>
+    
+    <footer>
+        <nav>
+            <a href="index.html" class="custom-button">Sobre Nós</a>
+            | <a href="setor 1/pagina2.html" class="custom-button">Procedimentos</a>
+            | <a href="setor 2/pagina3.html" class="custom-button">Valores</a>
+        </nav>
+    </footer>
+    <footer>Cílios Club. Todos os direitos reservados 2023.</footer>
 </body>
 </html>
